@@ -1,0 +1,13 @@
+{% extends 'admin/base_site.html' %} {% block content %}
+
+<h1>{{course_count}} khoa hoc</h1>
+
+<ul>
+  {% for s in stats %}
+  <li><strong>{{s.subject}}</strong></li>
+  <li><strong>{{s.id}}</strong></li>
+  <li><strong>{{s.lesson_count}}</strong></li>
+
+  {% endfor %}
+</ul>
+{% endblock %}
